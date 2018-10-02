@@ -9,14 +9,20 @@ from tkinter import *
 
 def main():
 
-    root_window = Tk()      # Basic  window that has close buttons
+    root_window = Tk()      # Main window for the application
 
-    the_label = Label(root_window,text="Hello world!")     # this creates a text label , needs a window to output as the first parameter
 
-    the_label.pack()        # fits the window in wherever it can on the screen...lazy waht of doing it
 
-    root_window.mainloop()      #keeps the window open continuously on the screen
+    top_frame = Frame(root_window).pack(side=TOP)        # declaring the top button as a frame object and binding it to the root window and pacs it on the top
+    bottom_frame = Frame(root_window).pack(side=BOTTOM)      # declarng the bottom froam as a frame obect to bind it the root window. and packs it on the bottom
 
+    #BUTTON SECTION
+    top_frame_button = Button(top_frame,text="Hi im a top fram button",fg="red").pack()     # T
+
+    bottom_frame_button = Button(bottom_frame,text="Hi im a top fram button",fg="red").pack()
+
+
+    root_window.mainloop()      #keeps the window open continuously on the screen the most important since it is the main loop
 
 if __name__ == '__main__':
     main()
