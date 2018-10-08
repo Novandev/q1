@@ -1,3 +1,4 @@
+import os
 from tkinter import filedialog
 from tkinter import *
 import pandas as pd
@@ -12,7 +13,7 @@ pd.set_option('display.width', 500)
 
 def renderRowTwo(window):
     '''This will be used to read in CSV files'''
-    csv_file=  filedialog.askopenfilename(initialdir = "/Users/donovanadams/Desktop/Github",title = "Select CSV file",filetypes = (("csv files","*.csv"),("all files","*.*")))
+    csv_file=  filedialog.askopenfilename(initialdir = os.getcwd(),title = "Select CSV file",filetypes = (("csv files","*.csv"),("all files","*.*")))
 
     # Using pandas to display a datafram
     dataframe = pd.read_csv(csv_file)
