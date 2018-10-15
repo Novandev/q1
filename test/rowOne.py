@@ -24,5 +24,7 @@ def renderRowOne(window):
     answer_field.grid(column=3, row=0)
 
 ''' END ROW ONE'''
+
+    class Data
 if __name__ == '__main__':
     main()
