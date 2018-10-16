@@ -1,8 +1,8 @@
 # and .x for .X usually singnifies the x axis aka width
 import tkinter as tk
 
-import pandas as pd
-comments = pd.read_csv('user_comments.csv')
+# import pandas as pd
+# comments = pd.read_csv('user_comments.csv')
 class Todo(tk.Tk):
     def __init__(self, tasks=None):     # for the init, must be set to non to avoid issues
         super().__init__()
@@ -41,7 +41,7 @@ class Todo(tk.Tk):
     def add_task(self, event=None):
         task_text = self.task_create.get(1.0,tk.END).strip() # This gets the input text from the text box we created as task_create the 1.0 starts at the beginning
         if len(task_text) > 0:      # If there is text in the task_text field prevents just spaces or returns as input
-        
+
             new_task = tk.Label(self, text=task_text, pady=10)      # Create a new label with the text from the input box
             _, task_style_choice = divmod(len(self.tasks), 2)   # Odd and even numbers will have diffrent color schemes
             my_scheme_choice = self.colour_schemes[task_style_choice]   # Sets the dictionary to one of the color schemese
