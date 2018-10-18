@@ -1,8 +1,8 @@
 # and .x for .X usually singnifies the x axis aka width
 import tkinter as tk
 
-# import pandas as pd
-# comments = pd.read_csv('user_comments.csv')
+import pandas as pd
+comments = pd.read_csv('user_comments.csv')
 class Todo(tk.Tk):
     def __init__(self, tasks=None):     # for the init, must be set to non to avoid issues
         super().__init__()
@@ -18,8 +18,8 @@ class Todo(tk.Tk):
 
         '''Default task if there are none, just to make sure'''
         # Makes a label with the text that adds items
-        todo1 = tk.Label(self, text="--- Add Items Here ---", bg="lightgrey", fg="black", pady=10)
-
+        # todo1 = tk.Label(self, text="--- Add Items Here ---", bg="lightgrey", fg="black", pady=10)
+        todo1 = tk.Label(self, text=comments.describe(), bg="lightgrey", fg="black", pady=10)
         self.tasks.append(todo1)  # append this task o the tasks list
 
         '''Loading tasks into the task lost'''
